@@ -1,4 +1,0 @@
-{     
-    "python.pythonPath": "C:\\Users\\pulma\\anaconda3\\python.exe"      ,
-    "python.linting.pylintPath": "${workspaceFolder}\\.venv\\Scripts\\pylint.exe" 
-} 
