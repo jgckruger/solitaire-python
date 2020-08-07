@@ -1,4 +1,4 @@
-from card import Card
+from classes.Card import Card
 
 suit_names = ['♣', '♦', '♥', '♠']
 colors = ['black', 'red', 'red', 'black']
