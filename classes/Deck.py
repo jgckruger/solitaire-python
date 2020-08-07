@@ -1,20 +1,15 @@
 from classes.Card import Card
 
 class Deck:
-
     cards = None
 
-    def __init__(self, cards, from_hand = False):
-        if(from_hand):
-            self.cards = [card.turn_card() for card in cards]
-        else:
-            self.cards = cards
+    def __init__(self, cards):
+        self.cards = [card.to_face_down() for card in cards]
 
     def pop_card(self):
         if(len(self.cards)):
             return self.cards.pop()
-        else:
-            return False
+        return False
     
     def print(self):
         for card in self.cards:

@@ -22,6 +22,10 @@ class Card:
     def turn_card(self):
         self.face_up = not(self.face_up)
 
+    def to_face_down(self):
+        self.face_up = False
+        return self
+
     def get_card_values(self):
         card = {
             'value': self.value,
