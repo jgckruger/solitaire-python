@@ -1,3 +1,4 @@
+from random import shuffle
 from classes.Card import Card
 
 class Deck:
@@ -6,6 +7,11 @@ class Deck:
     def __init__(self, cards):
         self.cards = [card.to_face_down() for card in cards]
 
+    def shuffle(self):
+        shuffle(self.cards)
+        shuffle(self.cards)
+        shuffle(self.cards)
+
     def pop_card(self):
         if(len(self.cards)):
             return self.cards.pop()
@@ -13,4 +19,4 @@ class Deck:
     
     def print(self):
         for card in self.cards:
-            print(card.get_card_values())
+            print(card)
