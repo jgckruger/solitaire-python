@@ -21,3 +21,15 @@ class Card:
 
     def turn_card(self):
         self.face_up = not(self.face_up)
+
+    def get_card_values(self):
+        card = {
+            'value': self.value,
+            'suit': self.suit,
+            'face_up': self.face_up,
+            'str_val': self.str_val,
+            'suit_name': self.suit_name,
+            'color': self.color
+        }
+
+        return card
