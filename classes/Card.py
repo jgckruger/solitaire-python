@@ -37,3 +37,9 @@ class Card:
         }
 
         return card
+    
+    def __str__(self):
+        return str(self.get_card_values())
+    
+    def __repr__(self):
+        return str(self.get_card_values())
