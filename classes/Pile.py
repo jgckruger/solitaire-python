@@ -14,7 +14,7 @@ class Pile:
             return self.cards[-1]
         return None
     
-    def insert_cards(card_list):
+    def insert_cards(self, card_list):
         top_pile = self.top()
         first_card = card_list[0]
         if top_pile == None:

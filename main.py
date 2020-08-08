@@ -1,8 +1,9 @@
 from random import shuffle
 from classes.Card import Card
+from classes.Hand import Hand
+from classes.Pile import Pile
 from classes.Deck import Deck
 from classes.Foundation import Foundation
-
 
 def new_game():
     cards = []
@@ -13,6 +14,9 @@ def new_game():
     
     deck = Deck(cards)
     deck.shuffle()
+    
+    
+    
     deck.print()
 
 new_game()
