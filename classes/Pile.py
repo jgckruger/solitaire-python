@@ -40,6 +40,11 @@ class Pile:
         for card in self.cards:
             print(card)
 
+    def get_card(self, row):
+        if row + 1 > len(self.cards):
+            return '   '
+        return str(self.cards[row])
+
     # TODO: redo
     def __repr__(self):
         pile = []
