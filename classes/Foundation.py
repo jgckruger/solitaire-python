@@ -48,3 +48,8 @@ class Foundation:
         }
 
         return foundation
+
+    def __repr__(self):
+        if not(self.top()):
+            return '[ X ]'
+        return str(self.top())

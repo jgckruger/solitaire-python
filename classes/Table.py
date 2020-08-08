@@ -6,4 +6,10 @@ class Table:
         self.foundations = foundations
 
     def print_table(self):
-        print('Deck: ', len(self.deck))
+        print('Deck Len: ', len(self.deck))
+
+        print(self.piles)
+        print(self.foundations)
+        print(self.hand)
+        print(self.deck)
+        

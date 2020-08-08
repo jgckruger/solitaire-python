@@ -39,3 +39,10 @@ class Pile:
     def print(self):
         for card in self.cards:
             print(card)
+
+    # TODO: redo
+    def __repr__(self):
+        pile = []
+        for card in self.cards:
+            pile.append(str(card))
+        return str(pile)+'\n'

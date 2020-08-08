@@ -21,3 +21,13 @@ class Hand:
 
     def get_hand(self):
         return self.cards
+    
+    def top(self):
+        if len(self.cards):
+            return self.cards[-1]
+        return None
+
+    def __repr__(self):
+        if not(self.top()):
+            return '[ X ]'
+        return str(self.top())

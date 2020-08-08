@@ -21,10 +21,7 @@ class Deck:
     def print(self):
         for card in self.cards:
             print(card)
-
-    def __len__(self):
-        return len(self.cards)
-        
+    
     def slice_deck(self, n):
         # TODO: check implementation
         if len(self.cards) == 0:
@@ -32,3 +29,11 @@ class Deck:
         card_list = self.cards[:n]
         del self.cards[:n]
         return card_list
+
+    def __len__(self):
+        return len(self.cards)
+        
+    def __repr__(self):
+        if len(self):
+            return '[ ' + str(len(self)) + ' ]'
+        return '[ X ]'

@@ -54,3 +54,6 @@ class Game:
                 return False
         return True
 
+    def print_status(self):
+        self.table.print_table()
+

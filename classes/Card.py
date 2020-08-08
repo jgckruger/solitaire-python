@@ -40,9 +40,9 @@ class Card:
     
     def __str__(self):
         # TODO: Color
-        card_str = '[' + self.str_val + self.suit_name + ']'
-        return card_str
-        
+        if self.face_up:
+            return '[' + self.str_val +' '+ self.suit_name + ']'
+        return '[ D ]'
     
     def __repr__(self):
         return str(self.get_card_values())
