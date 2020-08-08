@@ -17,7 +17,7 @@ class Card:
 
         self.str_val = card_names[value]
         self.suit_name = suit_names[suit]
-        self.color = colors[suit]        
+        self.color = colors[suit]
 
     def turn_card(self):
         self.face_up = not(self.face_up)
@@ -39,7 +39,10 @@ class Card:
         return card
     
     def __str__(self):
-        return str(self.get_card_values())
+        # TODO: Color
+        card_str = '[' + self.str_val + self.suit_name + ']'
+        return card_str
+        
     
     def __repr__(self):
         return str(self.get_card_values())
