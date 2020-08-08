@@ -16,7 +16,7 @@ class Deck:
     def pop_card(self):
         if(len(self.cards)):
             return self.cards.pop()
-        return False
+        return None
 
     def print(self):
         for card in self.cards:

@@ -23,15 +23,15 @@ class Pile:
                 return True
             return False
         elif (first_card.color != top_pile.color) and (first_card.value + 1 == top_pile.value):
-            self.cards + card_list
+            self.cards = self.cards + card_list
             return True
         return False
 
     def remove(self, index):
-        real_index = len(self.cards) - index
+        real_index = len(self.cards) - index - 2
 
         if self.cards[real_index].face_up:
-           card_list =  self.cards[real_index:]
+           card_list = self.cards[real_index:]
            del self.cards[real_index:]
            return card_list
         return None
