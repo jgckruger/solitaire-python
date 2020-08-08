@@ -57,3 +57,5 @@ class Game:
     def print_status(self):
         self.table.print_table()
 
+    def __str__(self):
+        return str(self.table)
