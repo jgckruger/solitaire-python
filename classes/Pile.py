@@ -42,7 +42,7 @@ class Pile:
 
     def get_card(self, row):
         if row + 1 > len(self.cards):
-            return '   '
+            return '     '
         return str(self.cards[row])
 
     # TODO: redo
