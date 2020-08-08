@@ -22,6 +22,12 @@ class Game:
 
         return deck
 
+    def check_for_end(self):
+        for foundation in self.foundations:
+            if not(foundation.is_full()):
+                return False
+        return True 
+
     def generate_new_foundations(self):
         foundations = []
         for i in range(4):

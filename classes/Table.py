@@ -11,11 +11,5 @@ class Table:
         self.piles = piles
         self.foundations = foundations
 
-    def check_for_end(self):
-        for foundation in self.foundations:
-            if not(foundation.is_full()):
-                return False
-        return True 
-
     def print_table(self):
         print('Deck: ', len(self.deck))
