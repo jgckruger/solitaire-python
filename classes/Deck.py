@@ -32,8 +32,13 @@ class Deck:
 
     def __len__(self):
         return len(self.cards)
-        
+    
+    def __str__(self):
+        if len(self):
+            return '[' + str(len(self)).zfill(2) + ' ]'
+        return '[ X ]'
+
     def __repr__(self):
         if len(self):
-            return '[ ' + str(len(self)) + ' ]'
+            return '[' + str(len(self)).zfill(2) + ' ]'
         return '[ X ]'
