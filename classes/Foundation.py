@@ -51,5 +51,5 @@ class Foundation:
 
     def __repr__(self):
         if not(self.top()):
-            return '[ X ]'
+            return '[ ' + self.suit_str +' ]'
         return str(self.top())
