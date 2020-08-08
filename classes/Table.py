@@ -1,12 +1,12 @@
-##   D      H      0       1       2       3       4       5       6       F
-#  [24 ]  [ X ]  [ D ]   [ D ]   [ D ]   [ D ]   [ D ]   [ D ]   [ D ]   [ X ]
-#                [ D ]   [ D ]   [ D ]   [ D ]   [ D ]   [ D ]   [ D ]   [ X ]
-#                        [A S]   [ D ]   [ D ]   [ D ]   [ D ]   [ D ]   [ X ]
-#                                [A S]   [ D ]   [ D ]   [ D ]   [ D ]   [ X ]
-#                                        [A S]   [ D ]   [ D ]   [ D ]
-#                                                [A S]   [ D ]   [ D ]
-#                                                        [A S]   [ D ]
-#                                                                [A S]
+#     D       H       0       1       2       3       4       5       6       F
+#   [24 ]   [ X ]   [ D ]   [ D ]   [ D ]   [ D ]   [ D ]   [ D ]   [ D ]   [ X ]
+#                   [ D ]   [ D ]   [ D ]   [ D ]   [ D ]   [ D ]   [ D ]   [ X ]
+#                           [A S]   [ D ]   [ D ]   [ D ]   [ D ]   [ D ]   [ X ]
+#                                   [A S]   [ D ]   [ D ]   [ D ]   [ D ]   [ X ]
+#                                           [A S]   [ D ]   [ D ]   [ D ]
+#                                                   [A S]   [ D ]   [ D ]
+#                                                           [A S]   [ D ]
+#                                                                   [A S]
 
 class Table:
     spacing = '   '
