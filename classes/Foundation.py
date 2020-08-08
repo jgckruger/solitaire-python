@@ -49,6 +49,11 @@ class Foundation:
 
         return foundation
 
+    def __str__(self):
+        if not(self.top()):
+            return '[ ' + self.suit_str +' ]'
+        return str(self.top())
+
     def __repr__(self):
         if not(self.top()):
             return '[ ' + self.suit_str +' ]'
