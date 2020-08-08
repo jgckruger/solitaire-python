@@ -2,7 +2,7 @@ from random import shuffle
 from classes.Card import Card
 
 class Deck:
-    cards = None
+    cards = []
 
     def __init__(self, cards):
         self.cards = [card.to_face_down() for card in cards]
@@ -20,3 +20,6 @@ class Deck:
     def print(self):
         for card in self.cards:
             print(card)
+
+    def __len__(self):
+        return len(self.cards)
