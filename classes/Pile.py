@@ -27,4 +27,15 @@ class Pile:
             return True
         return False
 
+    def remove(self, index):
+        real_index = len(self.cards) - index
+
+        if self.cards[real_index].face_up:
+           card_list =  self.cards[real_index:]
+           del self.cards[real_index:]
+           return card_list
+        return None
     
+    def print(self):
+        for card in self.cards:
+            print(card)

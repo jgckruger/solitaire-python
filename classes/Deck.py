@@ -1,6 +1,7 @@
 from random import shuffle
 from classes.Card import Card
 
+
 class Deck:
     cards = []
 
@@ -16,10 +17,17 @@ class Deck:
         if(len(self.cards)):
             return self.cards.pop()
         return False
-    
+
     def print(self):
         for card in self.cards:
             print(card)
 
     def __len__(self):
         return len(self.cards)
+        
+    def slice_deck(self, n):
+        if len(self.cards) == 0:
+            return None
+        card_list = self.cards[:n]
+        del self.cards[:n]
+        return card_list
