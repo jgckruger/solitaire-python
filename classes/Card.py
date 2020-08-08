@@ -41,6 +41,8 @@ class Card:
     def __str__(self):
         # TODO: Color
         if self.face_up:
+            if self.value == 9:
+                return '[' + self.str_val + self.suit_name + ']'
             return '[' + self.str_val +' '+ self.suit_name + ']'
         return '[ D ]'
     
