@@ -26,6 +26,7 @@ class Deck:
         return len(self.cards)
         
     def slice_deck(self, n):
+        # TODO: check implementation
         if len(self.cards) == 0:
             return None
         card_list = self.cards[:n]
