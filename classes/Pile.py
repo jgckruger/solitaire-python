@@ -21,6 +21,9 @@ class Pile:
 
     def insert_cards(self, card_list):
         top_pile = self.top()
+
+        if len(card_list) == 0:
+            return False
         first_card = card_list[0]
         if top_pile == None:
             if first_card.value == 12:  # K
