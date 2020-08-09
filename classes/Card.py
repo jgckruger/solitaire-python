@@ -1,6 +1,9 @@
+from classes.Color import Color
+
 card_names = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
 suit_names = ['♣', '♦', '♥', '♠']
 colors = ['black', 'red', 'red', 'black']
+color_codes = [Color.BLACK, Color.RED, Color.RED, Color.BLACK]
 
 class Card:
     value = None
@@ -18,6 +21,7 @@ class Card:
         self.str_val = card_names[value]
         self.suit_name = suit_names[suit]
         self.color = colors[suit]
+        self.color_code = color_codes[suit]
 
     def turn_card(self):
         self.face_up = not(self.face_up)
@@ -42,9 +46,9 @@ class Card:
         # TODO: Color
         if self.face_up:
             if self.value == 9:
-                return '[' + self.str_val + self.suit_name + ']'
-            return '[' + self.str_val +' '+ self.suit_name + ']'
-        return '[ D ]'
+                return self.color_code + '[' + self.str_val + self.suit_name + ']' + Color.RESET
+            return self.color_code + '[' + self.str_val +' '+ self.suit_name + ']' + Color.RESET
+        return Color.FACE_DOWN + '[ D ]' + Color.RESET
     
     def __repr__(self):
         return str(self.get_card_values())
