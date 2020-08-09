@@ -57,4 +57,5 @@ class Color:
     RESET = foreground['Default'] + background['Default']
     BLACK = foreground['Black'] + background['White']
     RED = foreground['Red'] + background['White']
+    EMPTY = foreground['White'] + background['Green']
     FACE_DOWN = foreground['White'] + background['LightBlue']

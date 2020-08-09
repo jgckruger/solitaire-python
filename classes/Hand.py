@@ -1,5 +1,5 @@
 from classes.Card import Card
-
+from classes.Color import Color
 
 class Hand:
     cards = None
@@ -26,6 +26,11 @@ class Hand:
         if len(self.cards):
             return self.cards[-1]
         return None
+
+    def __str__(self):
+        if not(self.top()):
+            return Color.EMPTY + '[ X ]' + Color.RESET
+        return str(self.top())
 
     def __repr__(self):
         if not(self.top()):
