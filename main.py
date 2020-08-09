@@ -5,10 +5,8 @@ import time
 clear = lambda: os.system('cls')
 
 game = Game()
-game.print_status()
-
 while(not(game.check_for_end())):
     # clear()
-    game.print_status()
+    print(game)
     action = input()
     game.command(action)
