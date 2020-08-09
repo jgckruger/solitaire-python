@@ -5,6 +5,7 @@ suit_names = ['♣', '♦', '♥', '♠']
 colors = ['black', 'red', 'red', 'black']
 color_codes = [Color.BLACK, Color.RED, Color.RED, Color.BLACK]
 
+
 class Foundation:
     def __init__(self, suit):
         self.cards = []   # STACK
@@ -17,8 +18,8 @@ class Foundation:
         # Checks if the suit is the same
         if card.suit != self.suit:
             return False
-        
-        # Check if the card value is the same as the 
+
+        # Check if the card value is the same as the
         if len(self.cards) != card.value:
             return False
         return True
@@ -31,6 +32,11 @@ class Foundation:
         self.cards.append(card)
         return True
 
+    def pop_card(self):
+        if(len(self.cards)):
+            return self.cards.pop()
+        return None
+        
     def top(self):
         if len(self.cards) == 0:
             return None

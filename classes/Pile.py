@@ -14,11 +14,16 @@ class Pile:
             return self.cards[-1]
         return None
     
+    def top_n(self, n):
+        if len(self.cards):
+            return self.cards[n:]
+        return None
+
     def insert_cards(self, card_list):
         top_pile = self.top()
         first_card = card_list[0]
         if top_pile == None:
-            if first_card.value == 12: ## K
+            if first_card.value == 12:  # K
                 self.cards = card_list
                 return True
             return False
@@ -27,15 +32,15 @@ class Pile:
             return True
         return False
 
-    def remove(self, index):
-        real_index = len(self.cards) - index - 2
-
-        if self.cards[real_index].face_up:
-           card_list = self.cards[real_index:]
-           del self.cards[real_index:]
-           return card_list
+    def remove(self, n):
+        if len(self.cards) and self.cards[n].face_up:
+            card_list = self.cards[n:]
+            del self.cards[n:]
+            if len(self.cards) and not(self.top().face_up):
+                self.cards[-1].turn_card()
+            return card_list
         return None
-    
+
     def print(self):
         for card in self.cards:
             print(card)
