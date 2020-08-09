@@ -1,7 +1,9 @@
 from classes.Card import Card
+from classes.Color import Color
 
 suit_names = ['♣', '♦', '♥', '♠']
 colors = ['black', 'red', 'red', 'black']
+color_codes = [Color.BLACK, Color.RED, Color.RED, Color.BLACK]
 
 class Foundation:
     def __init__(self, suit):
@@ -9,6 +11,7 @@ class Foundation:
         self.suit = suit
         self.suit_str = suit_names[suit]
         self.color = colors[suit]
+        self.color_code = color_codes[suit]
 
     def validate_card_into_foundation(self, card: Card):
         # Checks if the suit is the same
@@ -51,7 +54,7 @@ class Foundation:
 
     def __str__(self):
         if not(self.top()):
-            return '[ ' + self.suit_str +' ]'
+            return self.color_code + '[ ' + self.suit_str +' ]' + Color.RESET
         return str(self.top())
 
     def __repr__(self):
