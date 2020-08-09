@@ -1,6 +1,6 @@
 from random import shuffle
 from classes.Card import Card
-
+from classes.Color import Color
 
 class Deck:
     cards = []
@@ -35,8 +35,8 @@ class Deck:
     
     def __str__(self):
         if len(self):
-            return '[' + str(len(self)).zfill(2) + ' ]'
-        return '[ X ]'
+            return Color.FACE_DOWN + '[' + str(len(self)).zfill(2) + ' ]' + Color.RESET
+        return Color.EMPTY + '[ X ]' + Color.RESET
 
     def __repr__(self):
         if len(self):
