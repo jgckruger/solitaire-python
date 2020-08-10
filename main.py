@@ -2,11 +2,13 @@ from classes.Game import Game
 import os
 import time
 
-clear = lambda: os.system('cls')
-
 game = Game()
+game.help()
+
 while(not(game.check_for_end())):
-    clear()
+    game.clear_screen()
     print(game)
     action = input()
     game.command(action)
+
+print("You win")
