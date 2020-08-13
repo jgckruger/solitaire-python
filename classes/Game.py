@@ -65,12 +65,12 @@ class Game:
 
     def draw(self):
         top_card = self.deck.pop_card()
-        print(top_card)
+        # print(top_card)
         if(top_card):
             top_card.turn_card()
             self.hand.insert_card(top_card)
             return True
-        self.deck = Deck(self.hand.get_hand())
+        self.deck = Deck(list(reversed(self.hand.get_hand())))
         self.hand = Hand([])
         return True
 
