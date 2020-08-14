@@ -1,3 +1,5 @@
+# TODO: https://stackoverflow.com/questions/287871/how-to-print-colored-text-in-python
+
 class TextColor:
     def print_format_table(self):
         """ 
